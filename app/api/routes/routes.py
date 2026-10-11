@@ -13,7 +13,7 @@ def health_check():
     return {"status": "ok"}
 
 
-@routes.post("/items")
+@routes.post("/items", status_code=201)
 def create_item(item:ItemCreate):
     db = SessionLocal()
 
